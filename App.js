@@ -7,77 +7,148 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 function HomeScreen({ navigation }) {
   return (
     <SafeAreaView>
-    <ScrollView>
-    <View style={{flex: 1}}>
-      <Text style={styles.header}>Trending Recipes</Text>
-      <View style={styles.recipeBox}>
-        <Image source={{uri: 'https://placekitten.com/350/150'}}
-        style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
-        <Text>Recipe Name would go here</Text>
-        <Text>Recipe Subtitle would go here</Text>
-        <Text>Recipe Description would go here</Text>
-        <Text>Prep Time: 45mins</Text>
-      </View>
+      <ScrollView>
+        <View style={{flex: 1}}>
+          <Text style={styles.header}>Trending Recipes</Text>
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/350/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
 
-      <View style={styles.recipeBox}>
-        <Image source={{uri: 'https://placekitten.com/351/150'}}
-        style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
-        <Text>Recipe Name would go here</Text>
-        <Text>Recipe Subtitle would go here</Text>
-        <Text>Recipe Description would go here</Text>
-        <Text>Prep Time: 45mins</Text>
-      </View>
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/351/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
 
-      <View style={styles.recipeBox}>
-        <Image source={{uri: 'https://placekitten.com/356/150'}}
-        style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
-        <Text>Recipe Name would go here</Text>
-        <Text>Recipe Subtitle would go here</Text>
-        <Text>Recipe Description would go here</Text>
-        <Text>Prep Time: 45mins</Text>
-      </View>
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/356/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
 
-      <View style={styles.news}>
-      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae faucibus urna. Praesent id lobortis ante.
-      Integer auctor leo nisl. Vestibulum quis rutrum eros. Vivamus scelerisque sed sapien sed efficitur. Nam a tortor
-      et enim tincidunt hendrerit. Mauris sed semper est, in finibus felis. Vestibulum vel interdum ex, ut convallis
-      lacus. Duis finibus ligula odio, in pulvinar nisi mollis blandit. Aenean sagittis a ex at mattis.
-      Vestibulum bibendum purus efficitur, finibus purus a, ultrices lorem. Aenean consectetur scelerisque enim nec
-      convallis. Aenean magna purus, pharetra sed ornare sed, rhoncus vitae quam. Ut efficitur est eu nisl euismod
-      dictum. Nunc interdum lacus vel faucibus viverra. Phasellus in gravida velit, fermentum egestas nulla. Aliquam
-      sem libero, pulvinar eget leo sit amet, rhoncus consequat velit. Curabitur pharetra mi orci, at interdum nulla
-      scelerisque laoreet. Fusce non tincidunt diam.
-      Phasellus bibendum sagittis accumsan. Mauris mollis augue ut mauris eleifend, in consectetur sapien interdum.
-      Fusce tincidunt maximus sodales. Curabitur suscipit diam a justo tincidunt dapibus. Morbi a cursus risus. Nulla
-      et magna tortor. Sed mi ipsum, pretium vel nulla eget, volutpat placerat erat.</Text>
-      </View>
-    </View>
-    </ScrollView>
+          <View style={styles.news}>
+            <Text style={styles.header}>Recipe News</Text>
+            <View>
+              <Text style={styles.newsBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae faucibus urna. Praesent id lobortis ante.
+              Integer auctor leo nisl. Vestibulum quis rutrum eros. Vivamus scelerisque sed sapien sed efficitur. Nam a tortor
+              et enim tincidunt hendrerit. Mauris sed semper est, in finibus felis. Vestibulum vel interdum ex, ut convallis
+              lacus. Duis finibus ligula odio, in pulvinar nisi mollis blandit. Aenean sagittis a ex at mattis.</Text>
+
+              <Text style={styles.newsBody}>Vestibulum bibendum purus efficitur, finibus purus a, ultrices lorem. Aenean consectetur scelerisque enim nec
+              convallis. Aenean magna purus, pharetra sed ornare sed, rhoncus vitae quam. Ut efficitur est eu nisl euismod
+              dictum. Nunc interdum lacus vel faucibus viverra. Phasellus in gravida velit, fermentum egestas nulla. Aliquam
+              sem libero, pulvinar eget leo sit amet, rhoncus consequat velit. Curabitur pharetra mi orci, at interdum nulla
+              scelerisque laoreet. Fusce non tincidunt diam.</Text>
+
+              <Text style={styles.newsBody}>Phasellus bibendum sagittis accumsan. Mauris mollis augue ut mauris eleifend, in consectetur sapien interdum.
+              Fusce tincidunt maximus sodales. Curabitur suscipit diam a justo tincidunt dapibus. Morbi a cursus risus. Nulla
+              et magna tortor. Sed mi ipsum, pretium vel nulla eget, volutpat placerat erat.</Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 function SearchScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.header}>Search for Recipes</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={styles.header}>Search for Recipes</Text>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/350/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/351/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/356/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 function SavedScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.header}>Saved Recipes</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={styles.header}>Saved Recipes</Text>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/350/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/351/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+
+          <View style={styles.recipeBox}>
+            <Image source={{uri: 'https://placekitten.com/356/150'}}
+            style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+            <Text>Recipe Name would go here</Text>
+            <Text>Recipe Subtitle would go here</Text>
+            <Text>Recipe Description would go here</Text>
+            <Text>Prep Time: 45mins</Text>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 function SettingsScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.header}>Settings</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={styles.header}>Settings</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -142,7 +213,7 @@ function SavedStackScreen() {
       },
     }}
     >
-      <SavedStack.Screen name="Search for Recipes" component={SavedScreen} />
+      <SavedStack.Screen name="Saved Recipes" component={SavedScreen} />
     </SavedStack.Navigator>
   );
 }
@@ -181,6 +252,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgreen',
     padding: 10,
     marginTop: 10,
+    marginBottom: 10,
+  },
+  news: {
+    margin: 20,
+  },
+  newsBody: {
+    fontSize: 15,
     marginBottom: 10,
   },
   })
