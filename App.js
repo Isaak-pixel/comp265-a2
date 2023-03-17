@@ -72,10 +72,11 @@ function SearchScreen({ navigation }) {
           <View style={styles.recipeBox}>
             <Image source={{uri: 'https://placekitten.com/350/150'}}
             style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
-            <Text>Recipe Name would go here</Text>
-            <Text>Recipe Subtitle would go here</Text>
-            <Text>Recipe Description would go here</Text>
-            <Text>Prep Time: 45mins</Text>
+            <Text style={styles.recipeTitle}>Recipe Name would go here</Text>
+            <Text style={styles.recipeSub}>Recipe Subtitle would go here</Text>
+            <Text style={styles.recipeDesc}>Recipe Description would go here</Text>
+            <Text style={styles.recipePrep}>Prep Time: 45mins</Text>
+            <Text style={styles.recipeRating}>&#9733; &#9733; &#9733; &#9733; &#9734; (123)</Text>
           </View>
 
           <View style={styles.recipeBox}>
@@ -261,7 +262,26 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: 10,
   },
-  })
+  recipeTitle: {
+    fontSize: 22,
+    fontWeight: 'bold'
+  },
+  recipeSub: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  recipeDesc: {
+    fontSize: 15,
+  },
+
+  recipePrep: {
+    fontWeight: 'bold',
+    fontSize: 13,
+  },
+  recipeRating: {
+    fontSize: 15,
+  },
+})
 
 const Tab = createBottomTabNavigator();
 
