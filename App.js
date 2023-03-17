@@ -20,6 +20,14 @@ function SearchScreen({ navigation }) {
   );
 }
 
+function SavedScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={styles.header}>Saved Recipes</Text>
+    </View>
+  );
+}
+
 function SettingsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -72,6 +80,28 @@ function SearchStackScreen() {
   );
 }
 
+const SavedStack = createNativeStackNavigator();
+
+function SavedStackScreen() {
+  return (
+    <SavedStack.Navigator
+    mode="modal"
+    screenOptions= {{
+      headerStyle: {
+        backgroundColor: 'lightgreen',
+      },
+      headerTintColor: '#10591d',
+      headerTitleAlign: 'center',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}
+    >
+      <SavedStack.Screen name="Search for Recipes" component={SavedScreen} />
+    </SavedStack.Navigator>
+  );
+}
+
 const SettingsStack = createNativeStackNavigator();
 
 function SettingsStackScreen() {
@@ -110,6 +140,7 @@ export default function App() {
       <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Search" component={SearchStackScreen} />
+        <Tab.Screen name="Saved" component={SavedStackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
