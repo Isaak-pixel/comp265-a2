@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen</Text>
+      <Text style={styles.header}>Trending Recipes</Text>
     </View>
   );
 }
@@ -15,7 +15,7 @@ function HomeScreen({ navigation }) {
 function SearchScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Search screen</Text>
+      <Text style={styles.header}>Search for Recipes</Text>
     </View>
   );
 }
@@ -23,7 +23,7 @@ function SearchScreen({ navigation }) {
 function SettingsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings screen</Text>
+      <Text style={styles.header}>Settings</Text>
     </View>
   );
 }
@@ -93,6 +93,14 @@ function SettingsStackScreen() {
     </SettingsStack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    color: 'forestgreen',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
+  })
 
 const Tab = createBottomTabNavigator();
 
