@@ -1,14 +1,35 @@
 import * as React from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View, Image, SafeAreaView, ScrollView, } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <SafeAreaView>
+    <ScrollView>
+    <View style={{flex: 1}}>
       <Text style={styles.header}>Trending Recipes</Text>
+      <View style={styles.recipeBox}>
+        <Image source={{uri: 'https://placekitten.com/350/150'}}
+         style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+         <Text>Recipe Name Would go here</Text>
+      </View>
+
+      <View style={styles.recipeBox}>
+        <Image source={{uri: 'https://placekitten.com/351/150'}}
+         style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+         <Text>Recipe Name Would go here</Text>
+      </View>
+
+      <View style={styles.recipeBox}>
+        <Image source={{uri: 'https://placekitten.com/356/150'}}
+         style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
+         <Text>Recipe Name Would go here</Text>
+      </View>
     </View>
+    </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -129,6 +150,14 @@ const styles = StyleSheet.create({
     color: 'forestgreen',
     fontSize: 30,
     fontWeight: 'bold',
+    textAlign: 'center',
+    margin: 10,
+  } ,
+  recipeBox: {
+    backgroundColor: 'lightgreen',
+    padding: 10,
+    marginTop: 10,
+    marginBottom: 10,
   }
   })
 
@@ -136,13 +165,13 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="Home" component={HomeStackScreen} />
-        <Tab.Screen name="Search" component={SearchStackScreen} />
-        <Tab.Screen name="Saved" component={SavedStackScreen} />
-        <Tab.Screen name="Settings" component={SettingsStackScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
+          <Tab.Screen name="Home" component={HomeStackScreen} />
+          <Tab.Screen name="Search" component={SearchStackScreen} />
+          <Tab.Screen name="Saved" component={SavedStackScreen} />
+          <Tab.Screen name="Settings" component={SettingsStackScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
   );
 }
