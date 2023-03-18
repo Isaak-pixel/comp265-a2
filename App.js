@@ -114,6 +114,7 @@ function SavedScreen({ navigation }) {
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text style={styles.header}>Saved Recipes</Text>
 
+          <Text style={styles.savedHead}>Breakfast</Text>
           <View style={styles.recipeBox}>
             <Image source={{uri: 'https://placekitten.com/350/150'}}
             style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
@@ -289,6 +290,13 @@ const styles = StyleSheet.create({
   recipeRating: {
     fontSize: 16,
   },
+  savedHead: {
+    color: 'forestgreen',
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    margin: 10,
+  },
 })
 
 const Tab = createBottomTabNavigator();
@@ -296,7 +304,8 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
       <NavigationContainer>
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Navigator screenOptions={{ headerShown: false,
+        tabBarActiveTintColor: 'forestgreen', tabBarInactiveTintColor: 'gray', }}>
           <Tab.Screen name="Home" component={HomeStackScreen} />
           <Tab.Screen name="Search" component={SearchStackScreen} />
           <Tab.Screen name="Saved" component={SavedStackScreen} />
