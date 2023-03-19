@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Button, Text, View, Image, SafeAreaView, ScrollView, } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Image, SafeAreaView, ScrollView, TextInput} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -113,6 +113,15 @@ function SavedScreen({ navigation }) {
       <ScrollView>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text style={styles.header}>Saved Recipes</Text>
+
+          <TextInput
+            style={styles.input}
+            placeholder="Saved Groups"
+          />
+
+          <TouchableOpacity style={styles.button}>
+            <Text>Search</Text>
+          </TouchableOpacity>
 
           <Text style={styles.savedHead}>Breakfast</Text>
           <View style={styles.recipeBox}>
@@ -272,7 +281,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   recipeTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 'bold'
   },
   recipeSub: {
@@ -296,6 +305,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
+  },
+  input: {
+    height: 40,
+    margin: 10,
+    borderWidth: 2,
+    borderColor: 'forestgreen',
+    borderRadius: 50,
+    padding: 10,
+    width: 300,
   },
 })
 
