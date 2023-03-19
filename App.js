@@ -161,6 +161,7 @@ function SavedScreen({ navigation }) {
             <Text style={styles.recipeRating}>&#9733; &#9733; &#9733; &#9733; &#9734; (123)</Text>
           </View>
 
+          <Text style={styles.savedHead}>Lunch</Text>
           <View style={styles.recipeBox}>
             <Image source={{uri: 'https://placekitten.com/356/150'}}
             style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
@@ -180,8 +181,30 @@ function SettingsScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View>
           <Text style={styles.header}>Settings</Text>
+
+          <Text style={styles.settingsHead}>Settings Heading 1</Text>
+          <View>
+              <Text style={styles.options}>Settings Option 1</Text>
+              <Text style={styles.options}>Settings Option 2</Text>
+              <Text style={styles.options}>Settings Option 3</Text>
+          </View>
+
+          <Text style={styles.settingsHead}>Settings Heading 2</Text>
+          <View>
+              <Text style={styles.options}>Settings Option 4</Text>
+              <Text style={styles.options}>Settings Option 5</Text>
+              <Text style={styles.options}>Settings Option 6</Text>
+          </View>
+
+          <Text style={styles.settingsHead}>Settings Heading 3</Text>
+          <View>
+              <Text style={styles.options}>Settings Option 7</Text>
+              <Text style={styles.options}>Settings Option 8</Text>
+              <Text style={styles.options}>Settings Option 9</Text>
+          </View>
+
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -322,6 +345,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
+    marginTop: 20,
   },
   input: {
     height: 40,
@@ -360,6 +384,20 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'forestgreen'
   },
+  settingsHead: {
+    color: 'forestgreen',
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    float: 'left',
+    margin: 10,
+  },
+  options: {
+    color: '#10591d',
+    fontWeight: 'bold',
+    marginHorizontal: 20,
+    marginVertical: 10,
+  }
 })
 
 const Tab = createBottomTabNavigator();
