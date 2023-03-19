@@ -72,6 +72,19 @@ function SearchScreen({ navigation }) {
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text style={styles.header}>Search for Recipes</Text>
 
+          <TextInput
+            style={styles.input}
+            placeholder="Search Recipes"
+          />
+
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.btnFilter}>Filters</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.btnText}>Search</Text>
+          </TouchableOpacity>
+
           <View style={styles.recipeBox}>
             <Image source={{uri: 'https://placekitten.com/350/150'}}
             style={{width: 373, height: 150, borderRadius: 10, padding: 0}} />
@@ -116,11 +129,15 @@ function SavedScreen({ navigation }) {
 
           <TextInput
             style={styles.input}
-            placeholder="Saved Groups"
+            placeholder="Search Saved Groups"
           />
 
           <TouchableOpacity style={styles.button}>
-            <Text>Search</Text>
+            <Text style={styles.btnText}>Search</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.btnText}>Create New Group</Text>
           </TouchableOpacity>
 
           <Text style={styles.savedHead}>Breakfast</Text>
@@ -323,6 +340,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'forestgreen',
     margin: 10,
+  },
+  btnText: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    color: 'forestgreen'
   },
 })
 
