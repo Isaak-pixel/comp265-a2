@@ -315,6 +315,15 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 300,
   },
+  button: {
+    backgroundColor: 'lightgreen',
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: 'forestgreen',
+    margin: 10,
+  },
 })
 
 const Tab = createBottomTabNavigator();
