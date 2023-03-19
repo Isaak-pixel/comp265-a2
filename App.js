@@ -77,8 +77,8 @@ function SearchScreen({ navigation }) {
             placeholder="Search Recipes"
           />
 
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.btnFilter}>Filters</Text>
+          <TouchableOpacity style={styles.btnFiller}>
+            <Text style={styles.fillerText}>Filters</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.button}>
@@ -341,7 +341,21 @@ const styles = StyleSheet.create({
     borderColor: 'forestgreen',
     margin: 10,
   },
+  btnFiller: {
+    backgroundColor: 'lightgreen',
+    paddingHorizontal: 30,
+    paddingVertical: 5,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: 'forestgreen',
+    margin: 5,
+  },
   btnText: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    color: 'forestgreen'
+  },
+  fillerText: {
     fontWeight: 'bold',
     fontSize: 15,
     color: 'forestgreen'
